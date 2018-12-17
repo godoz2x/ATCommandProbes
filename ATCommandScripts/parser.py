@@ -3,7 +3,6 @@ import sys
 import time
 import datetime
 import numpy as np
-from textwrap import wrap
 import matplotlib.pyplot as plt
 from mobile_insight.analyzer import LogAnalyzer
 from mobile_insight.monitor import OfflineReplayer
@@ -68,7 +67,7 @@ y = []
 for j in range(0,len(packetTally)):
     x.append(packetTally[j][0])
     y.append(packetTally[j][1])
-# x = [ '\n'.join(wrap(l, 15)) for l in x ]
+    
 packets = tuple(x)
 frequency = tuple(y)
 y_pos = np.arange(len(packets))        
